@@ -11,22 +11,16 @@
 // [1, 2, 3, 4].myFilter((value) => value < 3); // [1, 2]
 
 
-// Array.prototype.myFilter = function (callbackFn, thisArg) {
-//     throw 'Not implemented!';
-//   };
-
 Array.prototype.myFilter = function (callbackFn, thisArg) {
     const result = [];
    
-    callbackFn = callbackFn.bind(thisArg)
    console.log(this)
+   callbackFn = callbackFn.bind(this)
     for(let i =0; i < this.length ; i++){
         console.log(i)
         if(this[i] !== undefined){
      if(callbackFn(this[i], i , this)){
-        
             result.push(this[i])
-        
      }
     }
    
@@ -34,5 +28,4 @@ Array.prototype.myFilter = function (callbackFn, thisArg) {
     return result
    };
 
-//    test-case
-   console.log([1,10,4].myFilter(num => (num % 2 === 0)))
+   console.log([1,2,4,5,10].myFilter(evenNumber,2))
