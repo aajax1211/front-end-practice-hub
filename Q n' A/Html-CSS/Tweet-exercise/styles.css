@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+  }
+
+.tweet{
+  background-color: #fff;
+  border-color: #cfd9de;
+  border-width: 1px;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.thumbnail{
+  size: 48px;
+  border-radius: 50%;
+}
+
+.name{
+  color: #000;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.metadata{
+  color: #71767b;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.message{
+  color: #0f1419;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.actionRow{
+  max-width: 425px;
+  justify-content: space-between;
+}
+
+svg{
+  color: #536471;
+  size: 16px;
+  align-items: center;
+}
+
+.actionCount{
+  color: #536471;
+  font-size: 13px;
+}
