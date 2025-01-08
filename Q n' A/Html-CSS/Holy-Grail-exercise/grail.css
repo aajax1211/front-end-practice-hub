@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  header,
+  nav,
+  main,
+  aside,
+  footer {
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  header {
+    background-color: tomato;
+    height: 60px;
+  }
+  
+  nav {
+    background-color: coral;
+    width: 100px;
+  }
+  
+  main {
+    background-color: moccasin;
+    flex-grow: 1;
+  }
+  
+  aside {
+    width: 100px;
+    background-color: sandybrown;
+  }
+  
+  footer {
+    height: 100px;
+    background-color: slategray;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+  }
+  
+  .main-area {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100vw;
+  }
+  
