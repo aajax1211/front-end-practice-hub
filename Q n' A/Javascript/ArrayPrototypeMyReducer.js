@@ -19,13 +19,21 @@ Array.prototype.myReduce = function (callbackFn, initialValue) {
     );
 
     for(let i = start ; i< this.length ; i++){
-       acc = callbackFn(acc,this[i], i, this)
-
+        if(this[i] !== undefined){
+            acc = callbackFn(acc,this[i], i, this)
+        }
+       
     }
-    
-
-    return acc;
+    if(acc == undefined){
+        throw "error"
+    }else{
+        return acc;
+    }
   };
 
-
+  const sumOfSquares =  (a,b) =>(
+    a+ (b*b)
+  )
+// Test Cases 
  console.log( [1,2,3,4].myReduce(((acu,current) => acu + current), 0))
+ console.log( [1,2,5,,6].myReduce(sumOfSquares))
