@@ -8,22 +8,19 @@
 
 Array.prototype.myReduce = function (callbackFn, initialValue) {
     let acc = 0;
-    let cur = 0;
-    let result = 0;
-
-    // callbackFn = callbackFn.bind(initialValue)
-    initialValue ? (
+    let start = 0;
+    
+    initialValue !== undefined ? (
         acc = initialValue,
-        cur = this[0]
+        start = 0
     ) :(
-        acc = this[0]
+        acc = this[0],
+        start = 1
     );
 
-    console.log("acc", acc , "cur", cur)
-    console.log(this)
-    for(let i = 0 ; i< this.length ; i++){
-       acc = callbackFn(acc,cur, i, this)
-        console.log(acc)
+    for(let i = start ; i< this.length ; i++){
+       acc = callbackFn(acc,this[i], i, this)
+
     }
     
 
@@ -31,4 +28,4 @@ Array.prototype.myReduce = function (callbackFn, initialValue) {
   };
 
 
- console.log( [1,2,3,4].myReduce((acu,current) => acu + current))
+ console.log( [1,2,3,4].myReduce(((acu,current) => acu + current), 0))
