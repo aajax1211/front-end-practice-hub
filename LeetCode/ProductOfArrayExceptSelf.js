@@ -9,5 +9,8 @@ var productExceptSelf = function(nums) {
         prefixProductArr[i] = prefixProductArr[i] * sufixProduct
         sufixProduct = sufixProduct * nums[i]
     }
+    console.log(prefixProductArr)
 return prefixProductArr
 };
+
+productExceptSelf([2,3,4,5])
